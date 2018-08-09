@@ -21,7 +21,7 @@ class LanguagePack::Solidus < LanguagePack::Rails5
     # a new rails app in the current directory
 
     # We try to save a second by using the system libxml
-    sh "NOKOGIRI_USE_SYSTEM_LIBRARIES=1 gem install --user-install --no-ri --no-rdoc railties:'~>5.1.0'"
+    sh "NOKOGIRI_USE_SYSTEM_LIBRARIES=1 gem install --user-install --no-ri --no-rdoc railties:'~>5.2'"
 
     # We need an absolute path since the gem bin dir isn't in our path
     rails_path = `ruby -e "gem 'railties'; puts Gem.bin_path('railties', 'rails')"`.strip
